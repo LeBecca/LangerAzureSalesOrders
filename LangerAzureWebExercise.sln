@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangerSalesOrders.Data", "LangerSalesOrders.Data\LangerSalesOrders.Data.csproj", "{7A619BEA-E1D9-47BE-BC1B-AC18684511DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangerSalesOrdersWebsite", "LangerSalesOrdersWebsite\LangerSalesOrdersWebsite.csproj", "{4DDD1F9B-D7B2-465B-94C2-51C752CCC46C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A619BEA-E1D9-47BE-BC1B-AC18684511DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A619BEA-E1D9-47BE-BC1B-AC18684511DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A619BEA-E1D9-47BE-BC1B-AC18684511DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A619BEA-E1D9-47BE-BC1B-AC18684511DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DDD1F9B-D7B2-465B-94C2-51C752CCC46C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DDD1F9B-D7B2-465B-94C2-51C752CCC46C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DDD1F9B-D7B2-465B-94C2-51C752CCC46C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DDD1F9B-D7B2-465B-94C2-51C752CCC46C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9003F45-803F-4B0B-8276-AF5D8829E710}
+	EndGlobalSection
+EndGlobal
