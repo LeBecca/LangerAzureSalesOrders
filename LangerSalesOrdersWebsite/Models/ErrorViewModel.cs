@@ -1,6 +1,6 @@
 using System;
 
-namespace LangerAzureWebExercise.Models
+namespace LangerSalesOrdersWebsite.Models
 {
     public class ErrorViewModel
     {

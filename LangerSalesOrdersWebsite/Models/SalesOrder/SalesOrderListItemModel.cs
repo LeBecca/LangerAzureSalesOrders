@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace LangerSalesOrders.Data.DataModels
+namespace LangerSalesOrdersWebsite.Models.SalesOrder
 {
-    public class SalesOrderDataModel
+    public class SalesOrderListItemModel
     {
         public int SalesOrderNumber { get; set; }
         public DateTime OrderDate { get; set; }
@@ -15,7 +18,6 @@ namespace LangerSalesOrders.Data.DataModels
         public decimal TaxAmount { get; set; }
         public decimal FreightAmount { get; set; }
         public decimal TotalAmountDue { get; set; }
-        public string SalesPersonLastName { get; set; }
-        public string SalesPersonFirstName { get; set; }
+        public string SalesPersonName { get; set; }
     }
 }
