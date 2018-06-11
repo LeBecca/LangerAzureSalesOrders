@@ -1,5 +1,5 @@
 ﻿SELECT
-	ROW_NUMBER() AS [RowNum],
+	ROW_NUMBER() OVER (ORDER BY [SalesOrderNumber] ASC) AS [RowNum],
 	[SalesOrderNumber],
 	[OrderDate],
 	[DueDate],

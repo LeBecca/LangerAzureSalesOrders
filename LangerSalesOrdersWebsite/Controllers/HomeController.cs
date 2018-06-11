@@ -9,7 +9,6 @@ using System.Linq;
 
 namespace LangerSalesOrdersWebsite.Controllers
 {
-    //[Authorize]
     public class HomeController : Controller
     {
         private readonly ISalesOrderRepository _repository;
@@ -26,7 +25,7 @@ namespace LangerSalesOrdersWebsite.Controllers
         {
             var model = new SalesOrderListModel
             {
-                Items = (await _repository.GetSalesOrdersPagedAsync(1, PAGE_SIZE))
+                Items = (await _repository.GetSalesOrdersAsync())
                     .Select(s => new SalesOrderListItemModel
                     {
                         SalesOrderNumber = s.SalesOrderNumber,

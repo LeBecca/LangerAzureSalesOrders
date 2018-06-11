@@ -13,11 +13,18 @@ namespace LangerSalesOrders.Data.Database
         public string ConnectionString { get; protected set; }
         public DbProviderFactory Factory { get; protected set; }
 
-        public DbScope Begin()
+        public DbConnection CreateConnection()
         {
             var conn = Factory.CreateConnection();
             conn.ConnectionString = ConnectionString;
 
+            return conn;
+        }
+
+        public DbScope Begin()
+        {
+            var conn = CreateConnection();
+            conn.Open();
             return new DbScope(conn);
         }
     }

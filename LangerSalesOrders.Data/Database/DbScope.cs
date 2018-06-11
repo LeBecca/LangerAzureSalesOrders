@@ -8,7 +8,7 @@ namespace LangerSalesOrders.Data.Database
         public DbScope(IDbConnection connection)
         {
             Connection = connection;
-            CommandTimeout = 60;
+            CommandTimeout = 100000;
         }
 
         public IDbConnection Connection { get; protected set; }
