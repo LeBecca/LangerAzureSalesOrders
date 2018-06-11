@@ -25,7 +25,7 @@ namespace LangerSalesOrdersWebsite.Controllers
         {
             var model = new SalesOrderListModel
             {
-                Items = (await _repository.GetSalesOrdersAsync())
+                Items = (await _repository.GetSalesOrdersPagedAsync(1, PAGE_SIZE))
                     .Select(s => new SalesOrderListItemModel
                     {
                         SalesOrderNumber = s.SalesOrderNumber,
