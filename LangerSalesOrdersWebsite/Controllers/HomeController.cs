@@ -25,7 +25,7 @@ namespace LangerSalesOrdersWebsite.Controllers
         {
             var model = new SalesOrderListModel
             {
-                Items = (await _repository.GetSalesOrdersPagedAsync(1, PAGE_SIZE))
+                Items = (await _repository.GetSalesOrdersAsync())
                     .Select(s => new SalesOrderListItemModel
                     {
                         SalesOrderNumber = s.SalesOrderNumber,
@@ -46,36 +46,36 @@ namespace LangerSalesOrdersWebsite.Controllers
             return View(model);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> ListPage(int pageNumber)
-        {
-            if (pageNumber <= 0)
-            {
-                return BadRequest();
-            }
+        //[HttpGet]
+        //public async Task<IActionResult> ListPage(int pageNumber)
+        //{
+        //    if (pageNumber <= 0)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            var model = new SalesOrderListModel
-            {
-                //Items = (await _repository.GetSalesOrdersPagedAsync(pageNumber, PAGE_SIZE))
-                //    .Select(s => new SalesOrderListItemModel
-                //    {
-                //        SalesOrderNumber = s.SalesOrderNumber,
-                //        DueDate = s.DueDate,
-                //        ShipDate = s.ShipDate,
-                //        OrderDate = s.OrderDate,
-                //        Status = s.Status,
-                //        PurchaseOrderNumber = s.PurchaseOrderNumber,
-                //        AccountNumber = s.AccountNumber,
-                //        SubtotalAmount = s.SubtotalAmount,
-                //        TaxAmount = s.TaxAmount,
-                //        FreightAmount = s.FreightAmount,
-                //        TotalAmountDue = s.TotalAmountDue,
-                //        SalesPersonName = string.Join(", ", s.SalesPersonLastName ?? string.Empty, s.SalesPersonFirstName ?? string.Empty)
-                //    })
-            };
+        //    var model = new SalesOrderListModel
+        //    {
+        //        //Items = (await _repository.GetSalesOrdersPagedAsync(pageNumber, PAGE_SIZE))
+        //        //    .Select(s => new SalesOrderListItemModel
+        //        //    {
+        //        //        SalesOrderNumber = s.SalesOrderNumber,
+        //        //        DueDate = s.DueDate,
+        //        //        ShipDate = s.ShipDate,
+        //        //        OrderDate = s.OrderDate,
+        //        //        Status = s.Status,
+        //        //        PurchaseOrderNumber = s.PurchaseOrderNumber,
+        //        //        AccountNumber = s.AccountNumber,
+        //        //        SubtotalAmount = s.SubtotalAmount,
+        //        //        TaxAmount = s.TaxAmount,
+        //        //        FreightAmount = s.FreightAmount,
+        //        //        TotalAmountDue = s.TotalAmountDue,
+        //        //        SalesPersonName = string.Join(", ", s.SalesPersonLastName ?? string.Empty, s.SalesPersonFirstName ?? string.Empty)
+        //        //    })
+        //    };
 
-            return View(model);
-        }
+        //    return View(model);
+        //}
 
         public IActionResult Error()
         {
